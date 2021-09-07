@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +13,18 @@
 	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
 	crossorigin="anonymous">
 </head>
-<body class="container">
+<body class="container-lg">
 
 	<h1 class="mt-2 text-center">Authors Registration</h1>
-	
-	<h2 class="text-center">Add Author</h2>
-	
+
+	<form action="<c:url value="/"/>">
+		<div class="d-grid gap-2">
+			<input type="submit" value="Back to homepage"
+				class="mt-2 btn-warning">
+		</div>
+	</form>
+
+	<div class="p-3 mt-3 bg-light border"> <h2 class="text-center">Add Author</h2>
 	<form action="<c:url value="authors"/>" method="post">
 		<div class="form-group">
 			<label for="name">Name</label> <input id="name" class="form-control" name="name"> 
@@ -30,21 +37,16 @@
 			<input type="submit" value="REGISTER" class="mt-2 btn-primary">
 		</div>
 	</form>
+	</div>
+
+	<div class="p-3 mt-3 bg-light border"> <h2 class="text-center">Authors List</h2>
 	
-	<form action="<c:url value="/"/>">
-		<div class="d-grid gap-2">
-			<input type="submit" value="Back to homepage" class="mt-2 btn-outline-primary">
-		</div>
-	</form>
-	
-	<h2 class="mt-2 text-center">Authors List</h2>
-	
-	<table class="table table-hover table-striped table-bordered">
+	<table class="table table-light table-hover table-striped table-bordered">
 		<thead>
-			<tr>
-				<th>NAME</th>
-				<th>EMAIL</th>
-				<th>BIRTHDATE</th>
+			<tr class="table-dark">
+				<th>Name</th>
+				<th>Email</th>
+				<th>Birthdate</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -52,11 +54,11 @@
 				<tr>
 					<td>${author.name}</td>
 					<td>${author.email}</td>
-					<td>${author.birthdate}</td>
+					<td><tags:localDate date="${author.birthdate}"/></td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
-	
+	</div>
 </body>
 </html>
