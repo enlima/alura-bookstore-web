@@ -27,9 +27,9 @@
 	<div class="p-3 mt-3 bg-light border"> <h2 class="text-center">Register New Author</h2>
 	<form action="<c:url value="authors"/>" method="post">
 		<div class="form-group">
-			<label for="name">Name</label> <input id="name" class="form-control" name="name"> 
-			<label for="email">Email</label> <input id="email" class="form-control" name="email" placeholder="name@example.com"> 
-			<label for="birthdate">Birthdate</label> <input id="birthdate" class="form-control" name="birthdate" placeholder="dd/mm/yyyy"> 
+			<label for="name">Name</label> <input id="name" class="form-control" name="name" required> 
+			<label for="email">Email</label> <input id="email" class="form-control" name="email" placeholder="name@example.com" required> 
+			<label for="birthdate">Birthdate</label> <input id="birthdate" class="form-control" name="birthdate" placeholder="dd/mm/yyyy" required> 
 			<label for="miniResume">Mini Resume</label> <textarea id="miniResume" class="form-control" name="miniResume" rows="2" maxlength="250"></textarea>
 		</div>
 		
