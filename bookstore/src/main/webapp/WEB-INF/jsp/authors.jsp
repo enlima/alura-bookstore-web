@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Authors | Alura Bookstore</title>
+<title>Alura Bookstore | Authors</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -15,7 +15,7 @@
 </head>
 <body class="container-lg">
 
-	<h1 class="mt-2 text-center">Authors Registration</h1>
+	<h1 class="mt-2 text-center">Alura Bookstore | Authors</h1>
 
 	<form action="<c:url value="/"/>">
 		<div class="d-grid gap-2">
@@ -24,7 +24,7 @@
 		</div>
 	</form>
 
-	<div class="p-3 mt-3 bg-light border"> <h2 class="text-center">Add Author</h2>
+	<div class="p-3 mt-3 bg-light border"> <h2 class="text-center">Register New Author</h2>
 	<form action="<c:url value="authors"/>" method="post">
 		<div class="form-group">
 			<label for="name">Name</label> <input id="name" class="form-control" name="name"> 
