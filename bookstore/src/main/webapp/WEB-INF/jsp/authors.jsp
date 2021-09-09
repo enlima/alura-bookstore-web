@@ -20,7 +20,7 @@
 	<form action="<c:url value="/"/>">
 		<div class="d-grid gap-2">
 			<input type="submit" value="Back to homepage"
-				class="mt-2 btn-warning">
+				class="mt-2 btn btn-outline-secondary">
 		</div>
 	</form>
 
@@ -43,7 +43,7 @@
 	
 	<table class="table table-light table-hover table-striped table-bordered">
 		<thead>
-			<tr class="table-dark">
+			<tr class="table-secondary">
 				<th>Name</th>
 				<th>Email</th>
 				<th>Birthdate</th>
